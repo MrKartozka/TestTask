@@ -9,7 +9,7 @@ function saveNotesToLocalStorage(notes) {
 
 function loadNotesFromLocalStorage() {
   const storedNotes = localStorage.getItem('notes');
-  return storedNotes ? JSON.parse(storedNotes) : [];
+  return storedNotes ? JSON.parse(storedNotes) : [{ title: 'Обычная заметка', description: 'Привет, мир!' }];
 }
 
 function App() {
@@ -19,7 +19,6 @@ function App() {
   useEffect(() => {
     saveNotesToLocalStorage(notes);
   }, [notes]);
-
 
   const addNote = (newNote) => {
     setNotes([...notes, newNote]);
