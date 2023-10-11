@@ -1,70 +1,20 @@
-# Getting Started with Create React App
+# Предварительные условия
+Прежде чем начать, убедитесь, что на вашем компьютере установлено следующее программное обеспечение:
+1. Node.js и npm: для проектов React требуется Node.js и его менеджер пакетов npm. Скачать их можно с официального сайта: [Node.js Downloads](https://nodejs.org/ru).
+2. Код Visual Studio: Вы можете скачать Visual Studio Code с официального сайта: [Visual Studio Code](https://code.visualstudio.com/).
+   
+## Шаг 1. Откройте существующий проект React
+1. Откройте код Visual Studio: запустите код Visual Studio на своем компьютере.
+2. Откройте существующий проект. Чтобы открыть существующий проект React, нажмите «Файл» в верхнем левом углу и выберите «Открыть папку». Перейдите в каталог, в котором находится ваш проект React, выберите его и нажмите «Открыть».
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Шаг 2.Установите зависимости проекта
+1. Откройте интегрированный терминал. В Visual Studio Code откройте интегрированный терминал, щелкнув «Вид» в верхнем меню и выбрав «Терминал» или нажав Ctrl+ `(обратная галочка).
+2. Перейдите в каталог вашего проекта. Убедитесь, что вы находитесь в корневом каталоге вашего проекта React. Вы должны увидеть название вашего проекта в командной строке терминала. Если нет, перейдите в каталог вашего проекта с помощью cd команды.
+3. Установите зависимости проекта: выполните следующую команду, чтобы установить зависимости проекта, перечисленные в package.jsonфайле вашего проекта:
+### `npm install`
+Это позволит загрузить и установить необходимые пакеты и библиотеки для вашего проекта.
 
-## Available Scripts
-
-In the project directory, you can run:
-
+## Шаг 3.Запустите свой проект React
+1. Запустите сервер разработки: выполните следующую команду, чтобы запустить сервер разработки для вашего проекта React:
 ### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+2. Доступ к вашему приложению React: ваше приложение React автоматически откроется в новом окне или вкладке браузера. URL-адрес по умолчанию обычно http://localhost:3000. Вы можете начать работу над своим проектом в Visual Studio Code, и любые изменения кода будут отражены в запущенном приложении в браузере.
