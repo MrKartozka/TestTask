@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  font-family: 'Helvetica', sans-serif;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+  background-color: #f9f9f9;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.app {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 120%;
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  margin: 0 -10%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.divider {
+  width: 1px;
+  background-color: #ccc;
+}
+
+.note-container {
+  display: flex;
+  flex: 1;
+}
+
+.note-list {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #f7f7f7;
+  border-right: 1px solid #e0e0e0;
+}
+
+.note-editor {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 0 4px 4px 0;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+.create-note,
+h2 {
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+.header {
+  background-color: #0077ff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.header img {
+  max-width: 70px;
+  height: auto;
+}
+
+.footer {
+  background-color: #f3f3f3;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ccc;
+}
+
+.footer a {
+  color: #0077ff;
+  text-decoration: none;
 }

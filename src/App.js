@@ -1,23 +1,76 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import NoteList from './NoteList';
+import NoteEditor from './NoteEditor';
+
+function saveNotesToLocalStorage(notes) {
+  localStorage.setItem('notes', JSON.stringify(notes));
+}
+
+function loadNotesFromLocalStorage() {
+  const storedNotes = localStorage.getItem('notes');
+  return storedNotes ? JSON.parse(storedNotes) : [];
+}
 
 function App() {
+  const [notes, setNotes] = useState(loadNotesFromLocalStorage());
+  const [selectedNote, setSelectedNote] = useState(null);
+
+  useEffect(() => {
+    saveNotesToLocalStorage(notes);
+  }, [notes]);
+
+
+  const addNote = (newNote) => {
+    setNotes([...notes, newNote]);
+  };
+
+  const editNote = (editedNote, index) => {
+    const updatedNotes = [...notes];
+    updatedNotes[index] = editedNote;
+    setNotes(updatedNotes);
+  };
+
+  const deleteNote = (index) => {
+    const updatedNotes = notes.filter((_, i) => i !== index);
+    setNotes(updatedNotes);
+    if (selectedNote === index) {
+      setSelectedNote(null);
+    }
+  };
+
+  const handleNoteClick = (index) => {
+    setSelectedNote(index);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="app">
+      <header className="header">
+        <h1>MyNotes</h1>
+        <img src="/logo.png" alt="Your Logo" />
       </header>
+
+      <div className="note-container">
+        <NoteList
+          notes={notes}
+          onNoteClick={handleNoteClick}
+          selectedNote={selectedNote}
+          deleteNote={deleteNote}
+        />
+        <div className="divider"></div>
+        <NoteEditor
+          note={selectedNote !== null ? notes[selectedNote] : {}}
+          addNote={addNote}
+          editNote={editNote}
+          deleteNote={deleteNote}
+          selectedNote={selectedNote}
+        />
+      </div>
+
+      <footer className="footer">
+        <p>&copy; 2023 MyNotes</p>
+        <p>Website: <a href="#">https:MyNotes.com</a></p>
+      </footer>
     </div>
   );
 }
