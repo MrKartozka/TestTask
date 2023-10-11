@@ -9,7 +9,15 @@ function saveNotesToLocalStorage(notes) {
 
 function loadNotesFromLocalStorage() {
   const storedNotes = localStorage.getItem('notes');
-  return storedNotes ? JSON.parse(storedNotes) : [{ title: 'Обычная заметка', description: 'Привет, мир!' }];
+  if (storedNotes) {
+    const parsedNotes = JSON.parse(storedNotes);
+    if (Array.isArray(parsedNotes) && parsedNotes.length > 0) {
+      return parsedNotes;
+    }
+  }
+  const defaultNote = { title: 'Обычная заметка', description: 'Привет, мир!' };
+  saveNotesToLocalStorage([defaultNote]);
+  return [defaultNote];
 }
 
 function App() {
